@@ -1,3 +1,21 @@
 header {
     text-align: center;
 }
+
+.questions{
+    display: none;
+    flex-wrap: wrap;
+}
+
+.questions h3{
+    width: 100%;
+}
+
+.answers{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    background-color: #3f3f3f;
+    color: white;
+}
+
