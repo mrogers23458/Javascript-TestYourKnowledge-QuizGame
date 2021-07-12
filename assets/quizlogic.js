@@ -4,6 +4,25 @@ let pickA = document.getElementById('optionA')
 let pickB = document.getElementById('optionB')
 let pickC = document.getElementById('optionC')
 let pickD = document.getElementById('optionD')
+let score = 0
+let messageScore = function(){
+    document.querySelector('.scoreOverlay').setAttribute('style', 'display: block;')
+    document.getElementById('numberCorrect').textContent = score;
+    
+}
+
+function renderQuestions(){
+    document.querySelector('.questions').setAttribute('style', 'display: flex;')
+    currenQuestion = qArray[setQuestion]
+    qDisplay.textContent = currenQuestion.question
+    pickA.textContent = currenQuestion.choiceA
+    pickB.textContent = currenQuestion.choiceB
+    pickC.textContent = currenQuestion.choiceC
+    pickD.textContent = currenQuestion.choiceD
+
+    return;
+}
+
 
 let qArray = [
     {
@@ -42,61 +61,51 @@ function checkAnswer(value){
     if(value === currenQuestion.correct) {
         console.log('correct');
         setQuestion ++;
+        score ++;
     }else {(console.log('wrong'))
         setQuestion ++;}
 
     if(setQuestion == qArray.length){
-        document.querySelector('.questions').setAttribute('style', 'display: none;')
+        messageScore();
+        
         return;
     }
     
     console.log(setQuestion)
     console.log(currenQuestion)
 
-    qDisplay.textContent = currenQuestion.question
-    pickA.textContent = currenQuestion.choiceA
-    pickB.textContent = currenQuestion.choiceB
-    pickC.textContent = currenQuestion.choiceC
-    pickD.textContent = currenQuestion.choiceD
+    renderQuestions();
     
 }
 
-let secondsLeft = 90
+
 let timer = document.querySelector('.time')
-let messageScore = function(){
-    console.log('works after timer expires')
-}
 
 function beginGame(){
+    let secondsLeft = 20
+    document.querySelector('.scoreOverlay').setAttribute('style', 'display: none;')
     setQuestion = 0
+    score = 0
     let timerInterval = setInterval(function(){
         secondsLeft--;
         timer.textContent = "Time left: " + secondsLeft
 
         if(secondsLeft === 0){
             clearInterval(timerInterval) 
-            messageScore()
+            messageScore()}
+        
+        if(setQuestion == qArray.length){
+            clearInterval(timerInterval)
         }
 
-        function renderQuestions(){
-            document.querySelector('.questions').setAttribute('style', 'display: flex;')
-            currenQuestion = qArray[setQuestion]
-            qDisplay.textContent = currenQuestion.question
-            pickA.textContent = currenQuestion.choiceA
-            pickB.textContent = currenQuestion.choiceB
-            pickC.textContent = currenQuestion.choiceC
-            pickD.textContent = currenQuestion.choiceD
-
-            return;
-        }
-
-        renderQuestions();
+        
 
     }, 1000);
+
+    renderQuestions();
     
 }
 
 
 startButton.addEventListener('click', beginGame)
 console.log(setQuestion)
-
