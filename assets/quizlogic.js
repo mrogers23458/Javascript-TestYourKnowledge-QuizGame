@@ -5,9 +5,11 @@ let pickB = document.getElementById('optionB')
 let pickC = document.getElementById('optionC')
 let pickD = document.getElementById('optionD')
 let score = 0
+
 let messageScore = function(){
     document.querySelector('.scoreOverlay').setAttribute('style', 'display: block;')
     document.getElementById('numberCorrect').textContent = score;
+    document.getElementById('numberWrong').textContent = ((qArray.length)-(score))
     
 }
 
