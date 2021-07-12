@@ -3,19 +3,37 @@ header {
 }
 
 .questions{
-    display: none;
+    display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 
-.questions h3{
-    width: 100%;
-}
 
 .answers{
     display: flex;
     flex-direction: column;
     width: 500px;
-    background-color: #3f3f3f;
-    color: white;
+
 }
 
+.answerButton{
+    margin: 5px;
+    background: #3f3f3f;
+    color: white;
+    padding: 10px;
+    box-shadow: 5px 5px red;
+    border-radius: 1rem;
+}
+
+.start{
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+}
+
+.start button{
+    width: 200px;
+    height: 100px;
+    border-radius: 1rem;
+}
