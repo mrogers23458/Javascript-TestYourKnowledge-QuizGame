@@ -6,8 +6,8 @@ During this project I learned and applied a lot of Javascript. This included set
 ## Usage
 To play the game click the Start Quiz button. This will begin a timer that gives 90 seconds to answer 3 questions about Javascript. Be careful when you answer though a wrong answer will deduct 10seconds from the timer.
 ## Screenshot
-![project](https://github.com/mrogers23458/password-generator/blob/master/assets/SSforreadme.jpg)
-[Deployed project available here](https://mrogers23458.github.io/password-generator/)
+![project](https://github.com/mrogers23458/Javascript-TestYourKnowledge-QuizGame/blob/master/assets/SSForGitCodingQuiz.png)
+[Deployed project available here](https://mrogers23458.github.io/Javascript-TestYourKnowledge-QuizGame/)
 
 ## Credits
 
