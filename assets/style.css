@@ -3,7 +3,8 @@ header {
 }
 
 .questions{
-    display: none;
+    visibility: visible;
+    display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
@@ -40,9 +41,24 @@ header {
 }
 
 .scoreOverlay{
-    display: none;
+    display: flex;
     position: absolute;
     background: blue;
     height: 100%;
-    width: 100%;
+    width: 60%;
 }
+
+.scorewrapper{
+    padding-left: 50px;
+}
+
+.highScore{
+    margin-left: 150px;
+}
+
+
+
+.answerButton:hover{
+    transform: scale(0.85);
+}
+

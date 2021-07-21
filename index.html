@@ -22,11 +22,26 @@
             <p class="answerButton" id="optionD" onclick="checkAnswer('D')">some answer text</p>
         </div>
         <div class="scoreOverlay">
+            <div class="scorewrapper">
             <p>Your Score</p>
             <p>Correct:</p>
             <h3 id="numberCorrect" >0</h3>
             <p>Incorrect:</p>
             <h3 id="numberWrong">0</h3>
+            </div>
+            <div class="highScore">
+                <h4>Save you score?</h4>
+            <form>
+                <input type="text" class="holdScore" placeholder="Enter your initials" id="initials" value="MR">
+                <button id="saveScore">Save Score</button>
+            </form>
+            <div class="displayHighScore">
+                <h4>High Scores!</h4>
+                <ol class='test' id="allScores"></ol>
+                
+
+            </div>
+            </div>
         </div>
     </div>
     <div class="start">
